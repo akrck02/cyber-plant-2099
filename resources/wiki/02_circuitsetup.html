@@ -1,0 +1,36 @@
+<h1 id="setting-up-the-circuit">Setting up the circuit 🪛</h1>
+
+<p>Hardware design and prototype has a magic ritual called &ldquo;wiring&rdquo;, you put cables on places and then two different things can happen, you release the magic smoke or everything works as expected.</p>
+
+<p>We are on the wiring stage now, so we need to put everything together. Lucky for us, we have already setup the moisture sensor.</p>
+
+<h1 id="what-the-fuck-is-a-relay">What the fuck is a relay?</h1>
+
+<p>This circuit have a component called Relay. Wikipedia has a concise meaning for that</p>
+
+<pre><code class="language-text">A relay is an electrically operated switch. It consists of a set of input terminals for a single or multiple control signals, and a set of operating contact terminals. The switch may have any number of contacts in multiple contact forms, such as make contacts, break contacts, or combinations thereof. 
+</code></pre>
+
+<p>Soooo&hellip; It is indeed an electrical switch. The arduino &ldquo;calls&rdquo; the Relay so it &ldquo;calls&rdquo; the pump to water the plant, easy.</p>
+
+<p>The relay has multiple connections, so let break down real quick.</p>
+
+<p><img src="../images/RelayExplanation.jpg" alt="" /></p>
+
+<p>Now we know how the relay works. We need to connect the pump and our power supply (The arduino in this case) to the relay, and then attach ground connections as well.</p>
+
+<blockquote>
+<p>Once connected, our board must follow this diagram</p>
+</blockquote>
+
+<p><img src="../images/Cyberplant2099.png" alt="Circuit explained" /></p>
+
+<p>Congratulations! The hardware part is finished!</p>
+
+<h1 id="keep-reading">Keep reading</h1>
+
+<p><a href="./01_MoistureSensor.md"> &lt; Last page</a>
+&amp;nbsp;&amp;nbsp;
+<a href="../README.md">Index</a>
+&amp;nbsp;&amp;nbsp;
+<a href="./03_Software.md">Next page &gt;</a></p>

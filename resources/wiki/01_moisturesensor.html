@@ -1,0 +1,44 @@
+<h1 id="what-is-a-moisture-sensor">What is a Moisture sensor? 🤔</h1>
+
+<p>A moisture sensor let the Arduino detect moisture</p>
+
+<pre><code class="language-text">Moisture : water or other liquid diffused in a small quantity as vapour, within a solid, or condensed on a surface.
+</code></pre>
+
+<p>We need this type of sensor to decide whether or not the cyberplant needs to be watered. If the moisture level reach low levels, the plant must be capable to &ldquo;call&rdquo; the watering system and set that level to the optimal percentage.</p>
+
+<h1 id="setting-up-the-sensor">Setting up the sensor</h1>
+
+<p>The sensor has three pin connectors, one for the 5V pin, other one for ground connection and the last one to output collected data to the Arduino.</p>
+
+<p><img src="../images/MoistureSensor.png" alt="Moisture sensor image" /></p>
+
+<p>We need to connect the red wire to the 5V connection in the Arduino board, ground connection to GND connection and Data connection.</p>
+
+<h2 id="checking-max-and-min-values">Checking MAX and MIN values</h2>
+
+<p>This type of sensors aren&rsquo;t the most precise tool in this world so, we need to know how to calculate moisture percent, to do so, we need to make use of a glass of water and the following code</p>
+
+<pre><code class="language-c++">    #define SERIAL_PORT 9600
+    #define MOISURE_SENSOR_PIN A0
+
+    void setup() {
+        Serial.begin(SERIAL_PORT);
+    }
+
+    void loop() {
+        int sensorValue = analogRead(MOISURE_SENSOR_PIN);
+        Serial.print(&quot;Read : &quot;);
+        Serial.println(sensorValue);
+    }
+</code></pre>
+
+<p>Get the idle value for the sensor save it, then put the sensor on the glass of water and get the max value.</p>
+
+<p>Well, now we have the MIN and MAX values for our specific sensors.</p>
+
+<h1 id="keep-reading">Keep reading</h1>
+
+<p><a href="../README.md">Index</a>
+&amp;nbsp;&amp;nbsp;
+<a href="./02_CircuitSetup.md">Next page &gt;</a></p>
